@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+import os, sys
+from port_scanner import main 
+
+# check sudo and env
+if os.getuid() != 0:
+    sys.exit('Must be run as root')
+
+main.main()
